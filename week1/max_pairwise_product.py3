@@ -1,18 +1,14 @@
-# Uses python3
-
-
 def max_pairwise_product(n, a):
     max1 = 0
     max2 = 0
     for i in range(0, n):
-        if (a[i] > max1):
-            max1 = a[i]
+        if (a[i] > a[max1]):
+            max1 = i
 
     for i in range(0, n):
-        if (a[i] != max1 and a[i] > max2):
-            max2 = a[i]
-    return (max1*max2)
-
+        if (i != max1 and a[i] > a[max2]):
+            max2 = i
+    return (a[max1]*a[max2])
 
 if __name__ == '__main__':
     n = int(input())
