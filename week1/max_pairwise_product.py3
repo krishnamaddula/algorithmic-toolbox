@@ -1,6 +1,6 @@
 def max_pairwise_product(n, a):
-    max1 = 0
-    max2 = 0
+    max1 = -1
+    max2 = -1
     for i in range(0, n):
         if (a[i] > a[max1]):
             max1 = i
